@@ -23,3 +23,18 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 - `README.md` — this file
 - `chats/` — conversation transcripts (read these!)
 - `project/` — the `WIS Abuja 2026 Design System` project files (HTML prototypes, assets, components)
+
+Second update for the website
+Readme · MD
+Copy
+
+# WIS Pavilion — Investment Gateway · Abuja 2026
+ 
+Live site for the World Investment Summit Pavilion, Abuja 2026.
+ 
+## Deployment
+ 
+Hosted via GitHub Pages from the `main` branch root.
+ 
+Live URL: `https://valerie-github1.github.io/wis.abuja.2026`
+ 
