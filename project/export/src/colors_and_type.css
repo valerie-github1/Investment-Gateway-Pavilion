@@ -1,0 +1,196 @@
+/* ============================================================
+   WIS Abuja 2026 — Colors & Type Tokens
+   ============================================================
+   Two surfaces share one brand:
+   • LIGHT (cream) — primary website / pavilion floor plan
+   • DARK  (deep)  — official programme / formal long-form
+   Brand colors: Nigerian green + gold. Gem accents for
+   pavilion booths (emerald/sapphire/ruby/amber/opal/topaz).
+   Type: Cinzel (serif caps, eyebrows), Cormorant Garamond
+   (display serif italic), DM Sans + Jost (sans body).
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Cinzel:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Jost:wght@200;300;400;500;600&display=swap");
+
+:root {
+  /* ── BRAND / NIGERIAN GREEN ─────────────────────────────── */
+  --wis-green:        #1A4D2E;   /* primary, hero bg, CTAs */
+  --wis-green-deep:   #1A4731;   /* deep variant (programme) */
+  --wis-green-mid:    #215C3E;
+  --wis-green-light:  #2D7A52;
+  --wis-green-pale:   #E8F5EE;
+  --wis-green-tint:   #2E7D4F;
+
+  /* ── BRAND / CEREMONIAL GOLD ────────────────────────────── */
+  --wis-gold:         #C9A84C;   /* primary gold */
+  --wis-gold-warm:    #B8902A;   /* on-cream gold */
+  --wis-gold-light:   #D4A844;
+  --wis-gold-bright:  #E8C96A;
+  --wis-gold-pale:    #FBF4E3;
+  --wis-gold-dim:     rgba(201,168,76,0.12);
+
+  /* ── NEUTRAL / CREAM (LIGHT SURFACE) ────────────────────── */
+  --wis-bg:           #F7F6F1;   /* page bg */
+  --wis-bg-2:         #EFEDE5;
+  --wis-bg-3:         #E8E5DB;
+  --wis-surface:      #FFFFFF;
+  --wis-text:         #18181B;   /* primary text */
+  --wis-text-2:       #4A4A52;
+  --wis-text-3:       #8A8A95;
+  --wis-border:       rgba(26,77,46,0.15);
+  --wis-border-2:     rgba(26,77,46,0.08);
+
+  /* ── NEUTRAL / DEEP (DARK SURFACE) ──────────────────────── */
+  --wis-dark:         #08100D;
+  --wis-dark-surface: #0E1A14;
+  --wis-dark-card:    #111C16;
+  --wis-dark-text:    #F2EDE4;
+  --wis-dark-muted:   rgba(242,237,228,0.62);
+  --wis-dark-faint:   rgba(242,237,228,0.18);
+  --wis-dark-border:  rgba(201,168,76,0.18);
+  --wis-dark-border-h:rgba(201,168,76,0.40);
+
+  /* ── GEM PALETTE (PAVILION TIERS) ───────────────────────── */
+  --gem-emerald:      #0d6b45;  --gem-emerald-lt:  #12a066;  --gem-emerald-bg: #f0f9f5;
+  --gem-sapphire:     #1a4fa0;  --gem-sapphire-lt: #3a7fd4;  --gem-sapphire-bg:#f0f4fc;
+  --gem-ruby:         #8f1a2e;  --gem-ruby-lt:     #d4405a;  --gem-ruby-bg:    #fdf0f2;
+  --gem-amber:        #b85e0a;  --gem-amber-lt:    #e8902a;  --gem-amber-bg:   #fef5ec;
+  --gem-opal:         #5a2a8a;  --gem-opal-lt:     #9b5fd4;  --gem-opal-bg:    #f7f0fd;
+  --gem-topaz:        #0a7a7a;  --gem-topaz-lt:    #20c0c0;  --gem-topaz-bg:   #f0fafa;
+
+  /* ── SEMANTIC / STATE ───────────────────────────────────── */
+  --wis-warning:      #DC2626;
+  --wis-warning-bg:   rgba(220,38,38,0.05);
+  --wis-warning-bd:   rgba(220,38,38,0.20);
+
+  /* ── TYPE FAMILIES ──────────────────────────────────────── */
+  --font-display:     "Cormorant Garamond", "Times New Roman", serif;
+  --font-eyebrow:     "Cinzel", "Trajan Pro", serif;
+  --font-sans:        "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans-alt:    "Jost", "DM Sans", sans-serif;
+  --font-mono:        ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ── TYPE SCALE ─────────────────────────────────────────── */
+  --type-eyebrow-size:   10px;   --type-eyebrow-track:  4px;
+  --type-eyebrow-weight: 600;
+  --type-body-size:      14px;   --type-body-leading:   1.65;
+  --type-meta-size:      11px;   --type-meta-track:     1.5px;
+
+  --type-h1-size:        clamp(50px, 8vw, 94px);
+  --type-h1-weight:      300;
+  --type-h2-size:        clamp(36px, 5.5vw, 72px);
+  --type-h3-size:        clamp(28px, 3vw, 46px);
+  --type-h4-size:        clamp(20px, 2vw, 28px);
+  --type-display-track:  -1px;
+
+  /* ── SPACING (8pt + 4pt micro) ──────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   48px;
+  --space-8:   64px;
+  --space-9:   90px;
+
+  /* ── RADII (mostly square — ceremonial) ─────────────────── */
+  --radius-0:   0px;     /* default — flat, formal */
+  --radius-sm:  2px;     /* badges, small chips */
+  --radius-md:  4px;
+  --radius-pill:999px;
+  --radius-circle:50%;
+
+  /* ── BORDERS ────────────────────────────────────────────── */
+  --bd-thin:   1px solid var(--wis-border);
+  --bd-fine:   1px solid var(--wis-border-2);
+  --bd-gold:   1px solid rgba(201,168,76,0.35);
+  --bd-card:   1.5px solid;       /* tier color sets paint */
+
+  /* ── SHADOWS / ELEVATION ────────────────────────────────── */
+  --sh-card:     0 2px 20px rgba(26,77,46,0.06);
+  --sh-card-hov: 0 8px 32px rgba(26,77,46,0.12);
+  --sh-tooltip:  0 20px 60px rgba(0,0,0,0.15);
+  --sh-hero:     0 16px 48px rgba(0,0,0,0.30);
+  --sh-gold-ring:0 0 0 6px rgba(212,168,68,0.12), 0 16px 48px rgba(0,0,0,0.30);
+  --sh-glow-gold:0 0 24px rgba(201,168,76,0.15);
+
+  /* ── MOTION ─────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.23,1,0.32,1);
+  --ease-in-out: cubic-bezier(0.4,0,0.2,1);
+  --dur-fast:    0.15s;
+  --dur-base:    0.25s;
+  --dur-slow:    0.55s;
+  --dur-rise:    0.7s;
+  --dur-ring:    20s;            /* logo orbital ring */
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES
+   ============================================================ */
+
+.wis-eyebrow {
+  font-family: var(--font-eyebrow);
+  font-size: var(--type-eyebrow-size);
+  letter-spacing: var(--type-eyebrow-track);
+  font-weight: var(--type-eyebrow-weight);
+  text-transform: uppercase;
+  color: var(--wis-gold-warm);
+}
+
+.wis-h1 {
+  font-family: var(--font-display);
+  font-size: var(--type-h1-size);
+  font-weight: var(--type-h1-weight);
+  line-height: 0.95;
+  letter-spacing: var(--type-display-track);
+  color: var(--wis-text);
+}
+.wis-h1 em { font-style: italic; color: var(--wis-gold); }
+
+.wis-h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-h2-size);
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--wis-text);
+}
+.wis-h2 em { font-style: italic; color: var(--wis-green); }
+
+.wis-h3 {
+  font-family: var(--font-display);
+  font-size: var(--type-h3-size);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--wis-text);
+}
+
+.wis-h4 {
+  font-family: var(--font-display);
+  font-size: var(--type-h4-size);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--wis-text);
+}
+
+.wis-body {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-leading);
+  font-weight: 400;
+  color: var(--wis-text-2);
+}
+
+.wis-meta {
+  font-family: var(--font-sans);
+  font-size: var(--type-meta-size);
+  letter-spacing: var(--type-meta-track);
+  text-transform: uppercase;
+  color: var(--wis-text-3);
+}
+
+.wis-numeral {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-feature-settings: "lnum" 1;
+}

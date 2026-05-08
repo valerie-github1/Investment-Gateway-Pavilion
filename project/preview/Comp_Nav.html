@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 0; background: var(--wis-bg); }
+.nav { display: flex; align-items: center; padding: 0 28px; height: 64px; background: rgba(247,246,241,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--wis-border-2); }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand .lock { width: 28px; height: 28px; border-radius: 50%; background: var(--wis-green); border: 1.5px solid var(--wis-gold); display: flex; align-items: center; justify-content: center; color: var(--wis-gold); font-family: var(--font-display); font-weight: 700; font-size: 12px; }
+.brand .name { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 4px; font-weight: 700; text-transform: uppercase; color: var(--wis-text); }
+.brand .name em { color: var(--wis-gold-warm); font-style: normal; }
+.links { display: flex; gap: 28px; margin: 0 auto; }
+.links a { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--wis-text); text-decoration: none; padding: 22px 0; position: relative; }
+.links a.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: 14px; height: 1px; background: var(--wis-gold); }
+.cta { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 2.5px; font-weight: 600; text-transform: uppercase; padding: 11px 22px; background: var(--wis-green); color: #fff; border: none; }
+.foot { font-family: var(--font-mono); font-size: 10px; color: var(--wis-text-3); padding: 12px 28px; }
+</style></head><body>
+<div class="card">
+  <div class="nav">
+    <div class="brand"><div class="lock">W</div><div class="name">WIS · <em>Abuja</em> · 2026</div></div>
+    <div class="links"><a href="#" class="active">Home</a><a href="#">Floor Plan</a><a href="#">Packages</a><a href="#">Programme</a></div>
+    <button class="cta">Enquire Now</button>
+  </div>
+  <div class="foot">64 px · sticky · backdrop-blur 12 px · only blur in the system · gold underline = active</div>
+</div>
+</body></html>

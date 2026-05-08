@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 24px 28px; gap: 16px; background: var(--wis-bg); }
+.tip { background: #fff; padding: 14px 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); border-top: 3px solid var(--wis-green); width: 280px; position: relative; }
+.tip::before { content: ''; position: absolute; left: 30px; bottom: -8px; width: 14px; height: 14px; background: #fff; transform: rotate(45deg); box-shadow: 4px 4px 6px rgba(0,0,0,0.04); }
+.head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.dot { width: 8px; height: 8px; background: var(--wis-green); border-radius: 50%; }
+.tier { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2.5px; font-weight: 600; text-transform: uppercase; color: var(--wis-green); }
+.name { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--wis-text); margin-bottom: 4px; line-height: 1.1; }
+.spec { font-family: var(--font-sans); font-size: 12px; color: var(--wis-text-2); margin-bottom: 8px; }
+.price { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: var(--wis-green); }
+.row { display: flex; gap: 24px; align-items: center; }
+.note { font-family: var(--font-mono); font-size: 10px; color: var(--wis-text-3); flex: 1; }
+</style></head><body>
+<div class="card">
+  <div class="row">
+    <div class="tip">
+      <div class="head"><div class="dot"></div><div class="tier">Emerald Tier</div></div>
+      <div class="name">Emerald Business Suite</div>
+      <div class="spec">3m × 3m · branded printed booth · premium location</div>
+      <div class="price">₦3,500,000</div>
+    </div>
+    <div class="note">Hover-tooltip pattern. White card · 3px green top accent · 20/60/.12 shadow · arrow notch on bottom-left edge.</div>
+  </div>
+</div>
+</body></html>

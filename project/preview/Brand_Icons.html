@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 24px 28px; gap: 14px; }
+.row { display: flex; gap: 14px; flex-wrap: wrap; }
+.icon { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 14px; min-width: 84px; background: var(--wis-bg); }
+.glyph { font-family: var(--font-display); font-size: 22px; color: var(--wis-green); line-height: 1; }
+.glyph.gold { color: var(--wis-gold-warm); }
+.glyph.faint { color: var(--wis-text-3); }
+.lbl { font-family: var(--font-mono); font-size: 9px; color: var(--wis-text-3); }
+.head { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--wis-gold-warm); }
+.note { font-family: var(--font-sans); font-size: 11px; color: var(--wis-text-3); line-height: 1.5; }
+</style></head><body>
+<div class="card">
+  <div class="head">Iconography · Unicode Glyphs · No Icon Font</div>
+  <div class="row">
+    <div class="icon"><div class="glyph">✓</div><div class="lbl">incl.</div></div>
+    <div class="icon"><div class="glyph faint">✕</div><div class="lbl">excl.</div></div>
+    <div class="icon"><div class="glyph gold">→</div><div class="lbl">cta</div></div>
+    <div class="icon"><div class="glyph">●</div><div class="lbl">tier</div></div>
+    <div class="icon"><div class="glyph">■</div><div class="lbl">booth</div></div>
+    <div class="icon"><div class="glyph">▢</div><div class="lbl">space</div></div>
+    <div class="icon"><div class="glyph gold">✦</div><div class="lbl">accent</div></div>
+    <div class="icon"><div class="glyph">·</div><div class="lbl">divider</div></div>
+    <div class="icon"><div class="glyph gold">★</div><div class="lbl">feat.</div></div>
+    <div class="icon"><div class="glyph">₦</div><div class="lbl">currency</div></div>
+  </div>
+  <div class="note">No emoji. No Lucide / Heroicons (yet — flagged for substitution review). Where stroke icons are needed, link Lucide CDN at stroke-width 1.25 and tint <code>--wis-gold-warm</code>.</div>
+</div>
+</body></html>

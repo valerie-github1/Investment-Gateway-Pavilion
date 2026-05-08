@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 0; overflow: hidden; background: var(--wis-bg); }
+.pkg { position: relative; padding: 22px 24px 24px; background: #fff; border: 1px solid rgba(26,168,103,0.18); }
+.pkg::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #0d6b45, #12a066); }
+.tier { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; color: #0d6b45; }
+.name { font-family: var(--font-display); font-style: italic; font-size: 24px; color: var(--wis-text); margin: 4px 0 12px; line-height: 1; }
+.price-row { display: flex; align-items: baseline; gap: 8px; }
+.price { font-family: var(--font-display); font-weight: 700; font-size: 32px; color: #0d6b45; line-height: 1; }
+.naira { font-family: var(--font-display); font-size: 22px; color: #0d6b45; }
+.size { font-family: var(--font-mono); font-size: 11px; color: var(--wis-text-3); margin-left: auto; }
+.list { margin: 14px 0 0; padding: 0; list-style: none; }
+.list li { font-family: var(--font-sans); font-size: 12px; color: var(--wis-text-2); padding: 4px 0 4px 18px; position: relative; line-height: 1.5; }
+.list li::before { content: '✓'; position: absolute; left: 0; color: #0d6b45; font-size: 11px; top: 4px; }
+.cta { display: inline-block; margin-top: 12px; font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 2.5px; font-weight: 600; text-transform: uppercase; color: #0d6b45; border-bottom: 1px solid #0d6b45; padding-bottom: 2px; }
+</style></head><body>
+<div class="card">
+  <div class="pkg">
+    <div class="tier">● Emerald Tier</div>
+    <div class="name">Emerald Business Suite</div>
+    <div class="price-row"><span class="naira">₦</span><span class="price">3,500,000</span><span class="size">3m × 3m · 3 days</span></div>
+    <ul class="list">
+      <li>Branded printed booth with custom signage</li>
+      <li>Premium pavilion location · network access</li>
+      <li>Concierge support and listing in directory</li>
+    </ul>
+    <span class="cta">Enquire Now &nbsp;→</span>
+  </div>
+</div>
+</body></html>

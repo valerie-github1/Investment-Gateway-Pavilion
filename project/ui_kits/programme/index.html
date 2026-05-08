@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WIS Abuja 2026 — Programme</title>
+  <link rel="stylesheet" href="../../colors_and_type.css" />
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--wis-dark); color: var(--wis-dark-text); font-family: var(--font-sans-alt); font-weight: 300; -webkit-font-smoothing: antialiased; }
+    .stage { min-height: 100vh; padding: 60px 24px; }
+    .doc { max-width: 920px; margin: 0 auto; }
+
+    /* hero with rings */
+    .hero { position: relative; padding: 60px 48px 80px; border: 1px solid var(--wis-dark-border); overflow: hidden; background: var(--wis-dark-surface); margin-bottom: 56px; }
+    .hero .ring { position: absolute; border-radius: 50%; border: 1px solid rgba(201,168,76,0.18); pointer-events: none; }
+    .hero .r1 { width: 600px; height: 600px; right: -180px; top: -180px; animation: spin 40s linear infinite; }
+    .hero .r2 { width: 380px; height: 380px; right: -100px; top: -60px; border-color: rgba(201,168,76,0.10); animation: spin 28s linear infinite reverse; }
+    .hero .r3 { width: 800px; height: 800px; left: -300px; bottom: -380px; border-color: rgba(201,168,76,0.06); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .hero .lock { position: relative; width: 96px; height: 96px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(201,168,76,0.4); margin-bottom: 28px; }
+    .hero .lock img { width: 100%; height: 100%; object-fit: cover; }
+
+    .eyebrow { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 5px; font-weight: 600; text-transform: uppercase; color: rgba(201,168,76,0.75); position: relative; }
+    .gold-rule { width: 48px; height: 1px; background: var(--wis-gold); margin: 18px 0; position: relative; }
+    h1.programme-title { position: relative; font-family: var(--font-display); font-size: clamp(48px, 7vw, 84px); font-weight: 300; line-height: 0.98; letter-spacing: -1px; margin: 0 0 18px; color: var(--wis-dark-text); }
+    h1.programme-title em { font-style: italic; color: var(--wis-gold); }
+    .hero .meta { position: relative; font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--wis-dark-muted); display: flex; flex-wrap: wrap; gap: 18px; }
+    .hero .meta span { display: flex; align-items: center; gap: 18px; }
+    .hero .meta span:not(:last-child)::after { content: '·'; color: var(--wis-gold); font-size: 16px; }
+
+    /* venue card */
+    .venue { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--wis-dark-border); margin-bottom: 56px; }
+    .venue .cell { padding: 28px 32px; border-right: 1px solid var(--wis-dark-border); background: var(--wis-dark-surface); }
+    .venue .cell:last-child { border-right: none; }
+    .venue .lbl { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--wis-gold); margin-bottom: 12px; }
+    .venue .v { font-family: var(--font-display); font-size: 22px; line-height: 1.2; color: var(--wis-dark-text); font-weight: 400; }
+    .venue .v em { font-style: italic; color: var(--wis-gold); }
+    .venue .s { font-family: var(--font-sans-alt); font-size: 13px; color: var(--wis-dark-muted); margin-top: 10px; line-height: 1.6; }
+
+    /* day section */
+    .day { margin-bottom: 56px; }
+    .day-head { display: flex; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--wis-dark-border); margin-bottom: 28px; }
+    .day-head .num { font-family: var(--font-display); font-size: 64px; font-weight: 300; color: var(--wis-gold); line-height: 1; font-feature-settings: "lnum" 1; }
+    .day-head .col { flex: 1; }
+    .day-head .lbl { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(201,168,76,0.75); }
+    .day-head h2 { font-family: var(--font-display); font-size: 32px; font-weight: 300; line-height: 1; margin: 6px 0 0; color: var(--wis-dark-text); }
+    .day-head h2 em { font-style: italic; color: var(--wis-gold); }
+    .day-head .date { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--wis-dark-muted); }
+
+    /* timeline rows */
+    .row { display: grid; grid-template-columns: 120px 1fr; gap: 32px; padding: 22px 0; border-bottom: 1px solid var(--wis-dark-faint); position: relative; transition: background .25s ease; }
+    .row:hover { background: rgba(201,168,76,0.03); }
+    .row::before { content: ''; position: absolute; left: -24px; top: 50%; width: 2px; height: 0%; background: linear-gradient(180deg, var(--wis-green-tint), var(--wis-gold)); transition: height .3s ease; transform: translateY(-50%); }
+    .row:hover::before { height: 70%; }
+    .row .time { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--wis-gold); line-height: 1; padding-top: 4px; }
+    .row .time .ampm { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 2px; color: var(--wis-dark-muted); margin-left: 4px; }
+    .row .body .ttl { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--wis-dark-text); margin-bottom: 6px; line-height: 1.25; }
+    .row .body .ttl em { font-style: italic; color: var(--wis-gold); }
+    .row .body .desc { font-family: var(--font-sans-alt); font-size: 13px; color: var(--wis-dark-muted); line-height: 1.65; max-width: 580px; }
+    .row .body .speaker { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(201,168,76,0.65); margin-top: 8px; }
+
+    /* divider */
+    .divider { display: flex; align-items: center; gap: 16px; padding: 40px 0; }
+    .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--wis-gold), transparent); }
+    .divider span { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--wis-dark-muted); }
+
+    /* footer */
+    .programme-foot { padding-top: 32px; margin-top: 32px; border-top: 1px solid var(--wis-dark-border); display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .programme-foot .crest { width: 56px; height: 56px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(201,168,76,0.4); }
+    .programme-foot .crest img { width: 100%; height: 100%; object-fit: cover; }
+    .programme-foot .l { font-family: var(--font-eyebrow); font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--wis-gold); }
+    .programme-foot .s { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--wis-dark-muted); }
+
+    /* day tabs */
+    .tabs { display: flex; gap: 12px; margin-bottom: 36px; }
+    .tabs button { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; padding: 14px 20px; background: transparent; color: var(--wis-dark-muted); border: 1px solid var(--wis-dark-border); cursor: pointer; transition: all .2s; flex: 1; }
+    .tabs button:hover { color: var(--wis-gold); border-color: var(--wis-dark-border-h); }
+    .tabs button.active { background: var(--wis-gold); color: var(--wis-dark); border-color: var(--wis-gold); }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="components/ProgrammeHero.jsx"></script>
+  <script type="text/babel" src="components/VenueCard.jsx"></script>
+  <script type="text/babel" src="components/DaySection.jsx"></script>
+  <script type="text/babel" src="components/ProgrammeFooter.jsx"></script>
+  <script type="text/babel" src="App.jsx"></script>
+</body>
+</html>

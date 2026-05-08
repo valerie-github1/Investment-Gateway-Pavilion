@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 24px 28px; gap: 12px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.lbl { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--wis-text); font-weight: 600; }
+.input { font-family: var(--font-sans); font-size: 14px; padding: 12px 14px; background: #fff; border: 1px solid var(--wis-border); border-radius: 2px; color: var(--wis-text); }
+.input::placeholder { color: var(--wis-text-3); }
+.input:focus { outline: none; border-color: var(--wis-gold-warm); box-shadow: 0 0 0 3px rgba(201,168,76,0.12); }
+.input.focused { border-color: var(--wis-gold-warm); box-shadow: 0 0 0 3px rgba(201,168,76,0.12); }
+.row { display: flex; gap: 12px; }
+.row .field { flex: 1; }
+.help { font-family: var(--font-sans); font-size: 11px; color: var(--wis-text-3); }
+</style></head><body>
+<div class="card">
+  <div class="row">
+    <div class="field"><label class="lbl">Organisation</label><input class="input" placeholder="Your organisation" /></div>
+    <div class="field"><label class="lbl">Tier of Interest</label><input class="input focused" value="Sapphire Suite" /></div>
+  </div>
+  <div class="field"><label class="lbl">Notes for Concierge</label><textarea class="input" rows="2" placeholder="Tell us about your booth needs"></textarea>
+    <div class="help">Custom configurations are accommodated for headline sponsors.</div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 24px 28px; gap: 12px; }
+.row { display: flex; gap: 12px; align-items: center; }
+.dot { width: 28px; height: 28px; border-radius: 50%; flex: 0 0 28px; }
+.lbl { font-family: var(--font-eyebrow); font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--wis-text); flex: 0 0 100px; }
+.use { font-family: var(--font-sans); font-size: 13px; color: var(--wis-text-2); flex: 1; }
+.hex { font-family: var(--font-mono); font-size: 10px; color: var(--wis-text-3); }
+.warning { background: rgba(220,38,38,0.05); border: 1px solid rgba(220,38,38,0.2); padding: 10px 14px; }
+.warning .lbl { color: #DC2626; flex: 0 0 90px; }
+.warning .use { font-size: 12px; color: #7a1d1d; }
+</style></head><body>
+<div class="card">
+  <div class="row"><div class="dot" style="background:#1A4D2E"></div><div class="lbl">Confirmed</div><div class="use">Bookings, registered, secured. Green carries positive state.</div><div class="hex">#1A4D2E</div></div>
+  <div class="row"><div class="dot" style="background:#C9A84C"></div><div class="lbl">Featured</div><div class="use">Highlight, recommended, headline tier.</div><div class="hex">#C9A84C</div></div>
+  <div class="row"><div class="dot" style="background:#DC2626"></div><div class="lbl">Limited</div><div class="use">Pulsing chip, scarcity callout. Used sparingly.</div><div class="hex">#DC2626</div></div>
+  <div class="warning">
+    <div class="row"><div class="lbl">Note</div><div class="use">All booking timelines and payment milestones are subject to confirmation. Pricing is indicative and finalised upon application.</div></div>
+  </div>
+</div>
+</body></html>

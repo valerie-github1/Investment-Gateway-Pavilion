@@ -1,0 +1,42 @@
+/* Shared card chrome for design-system preview tiles */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--wis-bg);
+  color: var(--wis-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.card {
+  width: 700px;
+  min-height: 150px;
+  padding: 24px 28px;
+  background: var(--wis-surface);
+  border: 1px solid var(--wis-border-2);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card.dark {
+  background: var(--wis-dark);
+  border-color: var(--wis-dark-border);
+  color: var(--wis-dark-text);
+}
+.row { display: flex; gap: 12px; align-items: stretch; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+.label {
+  font-family: var(--font-eyebrow);
+  font-size: 9px;
+  letter-spacing: 2.2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--wis-text-3);
+}
+.label.gold { color: var(--wis-gold-warm); }
+.swatch { flex: 1; min-height: 88px; padding: 12px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; }
+.swatch .name { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; }
+.swatch .hex  { font-family: var(--font-mono); font-size: 11px; opacity: 0.85; }
+.swatch.lt    { color: var(--wis-text); }
+hr.gold-rule { border: none; border-top: 1px solid rgba(201,168,76,0.4); margin: 0; }

@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 22px 24px; gap: 12px; }
+.row { display: flex; align-items: center; gap: 14px; padding: 6px 0; border-bottom: 1px solid var(--wis-border-2); }
+.row:last-child { border: none; }
+.token { font-family: var(--font-mono); font-size: 10px; color: var(--wis-text-3); flex: 0 0 130px; }
+.curve { width: 90px; height: 36px; flex: 0 0 90px; }
+.lbl { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2.2px; text-transform: uppercase; color: var(--wis-text); flex: 0 0 80px; }
+.use { font-family: var(--font-sans); font-size: 12px; color: var(--wis-text-2); flex: 1; }
+</style></head><body>
+<div class="card">
+  <div class="row">
+    <div class="token">--ease-out</div>
+    <svg class="curve" viewBox="0 0 100 40"><path d="M0,40 C23,40 32,0 100,0" fill="none" stroke="#1A4D2E" stroke-width="1.5"/></svg>
+    <div class="lbl">House</div>
+    <div class="use">cubic-bezier(0.23, 1, 0.32, 1) — entrances, hover rises</div>
+  </div>
+  <div class="row">
+    <div class="token">--ease-in-out</div>
+    <svg class="curve" viewBox="0 0 100 40"><path d="M0,40 C40,40 60,0 100,0" fill="none" stroke="#1A4D2E" stroke-width="1.5"/></svg>
+    <div class="lbl">Symmetric</div>
+    <div class="use">cubic-bezier(0.4, 0, 0.2, 1) — toggles, modals</div>
+  </div>
+  <div class="row">
+    <div class="token">--dur-fast .15</div><div style="flex:0 0 90px"></div><div class="lbl">Micro</div><div class="use">Color/border swaps, chip pulse</div>
+  </div>
+  <div class="row">
+    <div class="token">--dur-base .25</div><div style="flex:0 0 90px"></div><div class="lbl">Hover</div><div class="use">Card scale, shadow rise</div>
+  </div>
+  <div class="row">
+    <div class="token">--dur-rise .7</div><div style="flex:0 0 90px"></div><div class="lbl">Entrance</div><div class="use">opacity 0→1 + translateY 24→0</div>
+  </div>
+  <div class="row">
+    <div class="token">--dur-ring 20s</div><div style="flex:0 0 90px"></div><div class="lbl">Decor</div><div class="use">Logo orbital ring · linear infinite</div>
+  </div>
+</div>
+</body></html>

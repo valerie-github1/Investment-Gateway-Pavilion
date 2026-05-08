@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 24px 28px; background: var(--wis-bg); gap: 16px; }
+.row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.chip { display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px; border-radius: 999px; font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2.2px; font-weight: 600; text-transform: uppercase; }
+.chip .dot { width: 6px; height: 6px; border-radius: 50%; }
+.c-emerald { background: #f0f9f5; color: #0d6b45; } .c-emerald .dot { background: #0d6b45; }
+.c-sapphire { background: #f0f4fc; color: #1a4fa0; } .c-sapphire .dot { background: #1a4fa0; }
+.c-ruby { background: #fdf0f2; color: #8f1a2e; } .c-ruby .dot { background: #8f1a2e; }
+.c-amber { background: #fef5ec; color: #b85e0a; } .c-amber .dot { background: #b85e0a; }
+.c-opal { background: #f7f0fd; color: #5a2a8a; } .c-opal .dot { background: #5a2a8a; }
+.c-topaz { background: #f0fafa; color: #0a7a7a; } .c-topaz .dot { background: #0a7a7a; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(220,38,38,0.08); color: #DC2626; font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2.5px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(220,38,38,0.2); }
+.badge.feat { background: var(--wis-green); color: var(--wis-gold); border: none; }
+.badge.gold-flat { background: rgba(201,168,76,0.12); color: var(--wis-gold-warm); border: 1px solid rgba(201,168,76,0.3); }
+.lbl { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2.2px; text-transform: uppercase; color: var(--wis-text-3); flex: 0 0 100%; }
+@keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: 0.6 } }
+.badge.lim { animation: pulse 2.5s infinite; }
+</style></head><body>
+<div class="card">
+  <div class="lbl">Tier Chips · Pill Form</div>
+  <div class="row">
+    <span class="chip c-emerald"><span class="dot"></span>Emerald</span>
+    <span class="chip c-sapphire"><span class="dot"></span>Sapphire</span>
+    <span class="chip c-ruby"><span class="dot"></span>Ruby</span>
+    <span class="chip c-amber"><span class="dot"></span>Amber</span>
+    <span class="chip c-opal"><span class="dot"></span>Opal</span>
+    <span class="chip c-topaz"><span class="dot"></span>Topaz</span>
+  </div>
+  <div class="lbl">State Badges · Square</div>
+  <div class="row">
+    <span class="badge feat">★ Featured</span>
+    <span class="badge lim">● Limited</span>
+    <span class="badge gold-flat">Headline Sponsor</span>
+  </div>
+</div>
+</body></html>

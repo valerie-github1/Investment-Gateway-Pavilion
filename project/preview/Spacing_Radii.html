@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card { padding: 22px 24px; gap: 12px; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.box { width: 64px; height: 64px; background: var(--wis-green); display: flex; align-items: center; justify-content: center; color: var(--wis-gold); font-family: var(--font-mono); font-size: 11px; flex: 0 0 64px; }
+.txt { font-family: var(--font-mono); font-size: 10px; color: var(--wis-text-3); margin-left: 4px; }
+.note { font-family: var(--font-eyebrow); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--wis-gold-warm); margin-top: 4px; }
+</style></head><body>
+<div class="card">
+  <div class="row">
+    <div class="box" style="border-radius:0">0</div>
+    <div class="box" style="border-radius:2px">2</div>
+    <div class="box" style="border-radius:4px">4</div>
+    <div class="box" style="border-radius:999px;width:120px">pill</div>
+    <div class="box" style="border-radius:50%">circle</div>
+  </div>
+  <div class="txt">--radius-0 · --radius-sm (2) · --radius-md (4) · --radius-pill · --radius-circle</div>
+  <div class="note">★ Default is 0. Square corners are the brand's ceremonial signal — avoid 8/12/16 radii.</div>
+</div>
+</body></html>
