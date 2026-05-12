@@ -419,14 +419,22 @@ nav {
   background: #fff;
   border: 1px solid var(--border);
   box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-  padding: 24px 28px;
+  padding: 24px 28px 20px;
   max-width: 320px;
   min-width: 260px;
-  pointer-events: none;
+  pointer-events: auto;
   transition: opacity 0.15s;
   border-top: 3px solid var(--green);
 }
-.booth-tooltip.hidden { opacity: 0; }
+.booth-tooltip.hidden { opacity: 0; pointer-events: none; }
+.tooltip-close {
+  position: absolute; top: 10px; right: 12px;
+  background: none; border: none; cursor: pointer;
+  color: var(--text3); font-size: 18px; line-height: 1;
+  padding: 4px 6px; transition: color 0.15s;
+  font-family: sans-serif; font-weight: 300;
+}
+.tooltip-close:hover { color: var(--text); }
 .tooltip-gem {
   font-family: 'Cinzel', serif;
   font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
@@ -1275,6 +1283,7 @@ footer a:hover { text-decoration: underline; }
 
 <!-- TOOLTIP -->
 <div class="booth-tooltip hidden" id="boothTooltip">
+  <button class="tooltip-close" id="tooltipClose" aria-label="Close">&times;</button>
   <div class="tooltip-gem" id="tipGem"></div>
   <div class="tooltip-title" id="tipName"></div>
   <div class="tooltip-size" id="tipSize"></div>
@@ -1293,6 +1302,11 @@ document.querySelectorAll('.logo-circle img').forEach(img => {
 
 // Tooltip
 const tooltip = document.getElementById('boothTooltip');
+const tooltipClose = document.getElementById('tooltipClose');
+tooltipClose.addEventListener('click', function(e) {
+  e.stopPropagation();
+  tooltip.classList.add('hidden');
+});
 const booths = document.querySelectorAll('.booth[data-gem]');
 let activeBooths = [];
 
